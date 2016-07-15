@@ -21,23 +21,25 @@ reimplemented the components to work through the "Routing" section.
 ## Issues I have encountered
 
 1. The tutorial gives you:
-```
-{
-  path: '',
-  redirectTo: '/dashboard',
-  pathMatch: 'full'
-},
-```
-but this code doesn't work. I changed it to:
-```
-{
-  path: '',
-  redirectTo: 'dashboard'
-},
-```
-and it is working. If someone can explain this to me that would be great!
+   ```
+   {
+   path: '',
+   redirectTo: '/dashboard',
+   pathMatch: 'full'
+   },
+   ```
+   but this code doesn't work. I changed it to:
+   ```
+   {
+   path: '',
+   redirectTo: 'dashboard'
+   },
+   ```
+   and it is working. If someone can explain this to me that would be great!
 2. The `ng g route <blah>` doesn't work currently due to changes in the angular
-router. Hopefully, when this is updated I can transition smoothly. 
+   router. Hopefully, when this is updated I can transition smoothly. 
+3. `dashboard.component.spec.ts (17, 21): Supplied parameters do not match any
+   signature of call target.`? How do I write the Jasmine test for this?
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app
