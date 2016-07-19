@@ -17,7 +17,8 @@ export class HeroDetailComponent implements OnInit, OnDestroy {
   navigated: boolean = false;
 
   constructor(private heroesService: HeroesService,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute,
+              private router: Router) { }
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
@@ -48,7 +49,7 @@ export class HeroDetailComponent implements OnInit, OnDestroy {
 
   goBack(savedHero: Hero = null) {
     this.close.emit(savedHero);
-    if (this.navigated) { window.history.back(); }
+    if (this.navigated) { this.router.navigate(['/dashboard']); }
   }
 
 }
