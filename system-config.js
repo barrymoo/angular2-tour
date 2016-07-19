@@ -5,9 +5,13 @@
  * User Configuration.
  **********************************************************************************************/
 /** Map relative paths to URLs. */
-var map = {};
+var map = {
+    'angular2-in-memory-web-api': 'vendor/angular2-in-memory-web-api'
+};
 /** User packages configuration. */
-var packages = {};
+var packages = {
+    'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' }
+};
 ////////////////////////////////////////////////////////////////////////////////////////////////
 /***********************************************************************************************
  * Everything underneath this line is managed by the CLI.
