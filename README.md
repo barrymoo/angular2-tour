@@ -8,17 +8,20 @@ miserably because of the rescaffolding done during the "Routing" step. My
 inexperience was obviously the cause, therefore I started fresh and I am
 reimplemented the components to work through the "Routing" section.
 
+# Thoughts
+
+Tutorial was relatively easy after I figured out the rescaffolding bit. I will
+be working on moving another project (drew)[https://github.com/barrymoo/drew]
+to this stack next. I am hopeful it will just work on github.io. The next
+steps to learning the stack are:
+* integrating a real database (PostgreSQL or MongoDB)
+* Jasmine tests
+
 # Current State
 
-* Routes are setup (I started with this first, to avoid mistakes)
-* DashboardComponent - Working this now
-* To Do:
- - HeroDetailComponent and routing
- - HeroesComponent and routing
- - Add the CSS bits in
- - Finish the "HTTP" section
+Complete.
 
-## Issues I have encountered
+## Issues I encountered
 
 1. The tutorial gives you:
    ```
@@ -40,6 +43,11 @@ reimplemented the components to work through the "Routing" section.
    router. Hopefully, when this is updated I can transition smoothly. 
 3. `dashboard.component.spec.ts (17, 21): Supplied parameters do not match any
    signature of call target.`? How do I write the Jasmine test for this?
+4. `in-memory-data.service.ts` was a little tricky, see [Stack Overflow
+   Ticket](http://stackoverflow.com/questions/37377529/angular2-tutorial-tour-of-heroes-cannot-find-module-angular2-in-memory-web-a).
+   Additionally, the `in-memory-data.service.ts` file needs to be in `src/app`
+   directory to work properly. Apparently, it is not available on the server
+   otherwise.
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app
